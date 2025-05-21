@@ -46,3 +46,8 @@ def send_text_message(reply_token, text):
     res = requests.post(url, headers=headers, data=json.dumps(data))
     print("送信結果:", res.status_code, res.text)
 
+import os
+
+if __name__ == '__main__':
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host="0.0.0.0", port=port)
