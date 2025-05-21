@@ -6,7 +6,7 @@ import requests
 app = Flask(__name__)
 
 # あなたのチャンネルアクセストークン（LINE Developersで発行したものに置き換えてください）
-ACCESS_TOKEN = "ここにあなたのチャンネルアクセストークンを貼り付け"
+ACCESS_TOKEN = "+LC0heqsGGGxyIW0jWl/r1vOZGba4qk1tJjr2Zzb/ABB1DEbUR434mn54jyc1FTdUdcjUTqyDtz0hipkKNmSfDlU8TZiRhqCIpCuJ3JrqdWqwtNRCLIw6rHfczb90HnIAUAeTQJU6kOIRzhNH3KFLwdB04t89/1O/w1cDnyilFU="
 
 # ルートURL確認用
 @app.route('/')
