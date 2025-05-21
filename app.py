@@ -14,7 +14,7 @@ def home():
     return "Flask Webhook Ready!"
 
 # LINEからのWebhook受信
-@app.route('/webhook', methods=['POST'])
+@app.route('/callback', methods=['POST'])
 def webhook():
     try:
         body = request.json
