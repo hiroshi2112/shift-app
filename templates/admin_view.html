@@ -1,0 +1,14 @@
+<h2>管理者画面</h2>
+<h3>提出されたシフト</h3>
+<ul>
+  {% for shift in shifts %}
+    <li>{{ shift.name }} - {{ shift.date }}</li>
+  {% endfor %}
+</ul>
+
+<h3>本日の出勤状況</h3>
+<ul>
+  {% for report in reports %}
+    <li>{{ report.name }} - {{ report.status }} {% if report.reason %}（{{ report.reason }}）{% endif %}</li>
+  {% endfor %}
+</ul>
