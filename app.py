@@ -49,8 +49,7 @@ def admin():
     reports = Report.query.filter_by(date=datetime.today().strftime('%Y-%m-%d')).all()
     return render_template("admin_view.html", shifts=shifts, reports=reports)
 
-if __name__ == "__main__":
-    app.run(debug=True)
+
 class Shift(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(100))
