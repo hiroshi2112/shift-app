@@ -1,0 +1,23 @@
+<!-- templates/view_edit_shift.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>シフト確認・修正</title>
+</head>
+<body>
+    <h1>提出済みシフトの確認と修正</h1>
+    <form method="POST">
+        <label>名前: <input type="text" name="name" value="{{ name }}" required></label>
+        <button type="submit" name="action" value="search">検索</button>
+        <br><br>
+        {% if shifts %}
+            <p>シフト一覧（{{ name }}）:</p>
+            {% for shift in shifts %}
+                <label>
+                    <input type="checkbox" name="delete_days" value="{{ shift.date }}">
+                    {{ shift.date }}
+                </label><br>
+            {% endfor %}
+            <br>
+            <button type="submit" name="action" value="delete">選択した日
