@@ -1,0 +1,23 @@
+<!-- templates/monthly_shift.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>月間シフト提出</title>
+</head>
+<body>
+    <h1>月間シフト提出</h1>
+    <form method="POST">
+        <label>名前: <input type="text" name="name" required></label><br><br>
+        <label>月を選択: <input type="month" name="month" required></label><br><br>
+        <label>出勤可能日を選んでください：</label><br>
+        {% for day in days %}
+            <input type="checkbox" name="days" value="{{ day }}"> {{ day }}<br>
+        {% endfor %}
+        <br>
+        <button type="submit">提出</button>
+    </form>
+    <br>
+    <a href="/">戻る</a>
+</body>
+</html>
